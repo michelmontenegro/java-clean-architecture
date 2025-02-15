@@ -1,7 +1,7 @@
-package br.com.clean.arc.java.example.infra.gateways;
+package br.com.clean.arc.java.example.infrastructure.gateways;
 
 import br.com.clean.arc.java.example.domain.entities.usuario.Usuario;
-import br.com.clean.arc.java.example.infra.persistence.UsuarioEntity;
+import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioEntity;
 
 public class UsuarioEntityMapper {
 

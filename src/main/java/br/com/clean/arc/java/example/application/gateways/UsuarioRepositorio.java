@@ -4,8 +4,10 @@ import br.com.clean.arc.java.example.domain.entities.usuario.Usuario;
 
 import java.util.List;
 
-public interface RepositorioDeUsuario {
+public interface UsuarioRepositorio {
+
     Usuario cadastrarUsuario(Usuario usuario);
 
     List<Usuario> listarTodos();
+
 }

@@ -1,11 +1,11 @@
 package br.com.clean.arc.java.example.domain.vo;
 
-public class EnderecoVo {
+public class EnderecoVO {
     private String cep;
     private Integer numero;
     private String complemento;
 
-    public EnderecoVo(String cep, Integer numero, String complemento) {
+    public EnderecoVO(String cep, Integer numero, String complemento) {
         this.cep = cep;
         this.numero = numero;
         this.complemento = complemento;

@@ -1,6 +1,6 @@
 package br.com.clean.arc.java.example.domain.entities.usuario;
 
-import br.com.clean.arc.java.example.domain.vo.EnderecoVo;
+import br.com.clean.arc.java.example.domain.vo.EnderecoVO;
 
 import java.time.LocalDate;
 
@@ -10,13 +10,13 @@ public class Usuario {
     private LocalDate nascimento;
     private String email;
 
-    private EnderecoVo endereco;
+    private EnderecoVO endereco;
 
-    public EnderecoVo getEndereco() {
+    public EnderecoVO getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(EnderecoVo endereco) {
+    public void setEndereco(EnderecoVO endereco) {
         this.endereco = endereco;
     }
 

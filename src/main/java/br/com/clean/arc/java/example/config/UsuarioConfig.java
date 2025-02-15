@@ -1,11 +1,11 @@
 package br.com.clean.arc.java.example.config;
 
-import br.com.clean.arc.java.example.application.gateways.RepositorioDeUsuario;
+import br.com.clean.arc.java.example.application.gateways.UsuarioRepositorio;
 import br.com.clean.arc.java.example.application.usecases.usuario.CriarUsuario;
-import br.com.clean.arc.java.example.application.usecases.usuario.ListarUsuarios;
-import br.com.clean.arc.java.example.infra.gateways.RepositorioDeUsuarioJpa;
-import br.com.clean.arc.java.example.infra.gateways.UsuarioEntityMapper;
-import br.com.clean.arc.java.example.infra.persistence.UsuarioRepository;
+import br.com.clean.arc.java.example.application.usecases.usuario.ListarUsuario;
+import br.com.clean.arc.java.example.infrastructure.gateways.UsuarioRepositorioJpa;
+import br.com.clean.arc.java.example.infrastructure.gateways.UsuarioEntityMapper;
+import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -20,18 +20,18 @@ import org.springframework.context.annotation.Configuration;
 public class UsuarioConfig {
 
     @Bean
-    CriarUsuario criarUsuario(RepositorioDeUsuario repositorioDeUsuario){
-        return new CriarUsuario(repositorioDeUsuario);
+    CriarUsuario criarUsuario(UsuarioRepositorio usuarioRepositorio){
+        return new CriarUsuario(usuarioRepositorio);
     }
 
     @Bean
-    ListarUsuarios listarUsuarios(RepositorioDeUsuario repositorioDeUsuario){
-        return new ListarUsuarios(repositorioDeUsuario);
+    ListarUsuario listarUsuarios(UsuarioRepositorio usuarioRepositorio){
+        return new ListarUsuario(usuarioRepositorio);
     }
 
     @Bean
-    RepositorioDeUsuarioJpa criarRepositorioJpa(UsuarioRepository repositorio, UsuarioEntityMapper mapper){
-        return new RepositorioDeUsuarioJpa(repositorio, mapper);
+    UsuarioRepositorioJpa criarRepositorioJpa(UsuarioRepository repositorio, UsuarioEntityMapper mapper){
+        return new UsuarioRepositorioJpa(repositorio, mapper);
     }
 
     @Bean

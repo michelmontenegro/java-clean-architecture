@@ -1,4 +1,4 @@
-package br.com.clean.arc.java.example.infra.persistence;
+package br.com.clean.arc.java.example.infrastructure.persistence;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

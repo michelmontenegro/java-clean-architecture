@@ -22,7 +22,7 @@ public class UsuarioTest {
 
     @Test
     public void deveCriarUsuarioUsandoFabricaDeUsuario(){
-        FabricaDeUsuario fabrica = new FabricaDeUsuario();
+        UsuarioBuilder fabrica = new UsuarioBuilder();
         Usuario usuario = fabrica.comNomeCpfNascimento("Emily", "654.123.897-88",
                 LocalDate.parse("2000-10-01"));
 

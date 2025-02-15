@@ -1,7 +1,7 @@
-package br.com.clean.arc.java.example.infra.controller.usuario;
+package br.com.clean.arc.java.example.infrastructure.controller.usuario;
 
 import br.com.clean.arc.java.example.application.usecases.usuario.CriarUsuario;
-import br.com.clean.arc.java.example.application.usecases.usuario.ListarUsuarios;
+import br.com.clean.arc.java.example.application.usecases.usuario.ListarUsuario;
 import br.com.clean.arc.java.example.domain.entities.usuario.Usuario;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,26 +17,26 @@ import java.util.stream.Collectors;
 public class UsuarioController {
 
     private final CriarUsuario criarUsuario;
-    private final ListarUsuarios listarUsuarios;
+    private final ListarUsuario listarUsuarios;
 
-    public UsuarioController(CriarUsuario criarUsuario, ListarUsuarios listarUsuarios) {
+    public UsuarioController(CriarUsuario criarUsuario, ListarUsuario listarUsuarios) {
         this.criarUsuario = criarUsuario;
         this.listarUsuarios = listarUsuarios;
     }
 
     @PostMapping
-    public UsuarioDto cadastrarUsuario(@RequestBody UsuarioDto dto) {
+    public UsuarioDTO cadastrarUsuario(@RequestBody UsuarioDTO dto) {
         Usuario salvo = criarUsuario.cadastrarUsuario(new Usuario(dto.cpf(), dto.nome(), dto.nascimento(),
                 dto.email()));
 
-        return new UsuarioDto(salvo.getCpf(), salvo.getNome(), salvo.getNascimento(), salvo.getEmail());
+        return new UsuarioDTO(salvo.getCpf(), salvo.getNome(), salvo.getNascimento(), salvo.getEmail());
 
     }
 
     @GetMapping
-    public List<UsuarioDto> listarUsuarios() {
+    public List<UsuarioDTO> listarUsuarios() {
         return listarUsuarios.obterTodosUsuario().stream()
-                .map(u -> new UsuarioDto(u.getCpf(), u.getNome(), u.getNascimento(), u.getEmail()))
+                .map(u -> new UsuarioDTO(u.getCpf(), u.getNome(), u.getNascimento(), u.getEmail()))
                 .collect(Collectors.toList());
     }
 }

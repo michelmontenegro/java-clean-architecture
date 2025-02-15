@@ -1,6 +1,6 @@
-package br.com.clean.arc.java.example.infra.gateways;
+package br.com.clean.arc.java.example.infrastructure.gateways;
 
-import br.com.clean.arc.java.example.application.gateways.RepositorioDeUsuario;
+import br.com.clean.arc.java.example.application.gateways.UsuarioRepositorio;
 import br.com.clean.arc.java.example.domain.entities.usuario.Usuario;
 
 import java.io.FileWriter;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RepositorioDeUsuarioEmArquivo implements RepositorioDeUsuario {
+public class UsuarioRepositorioEmArquivo implements UsuarioRepositorio {
     List<Usuario> usuarios = new ArrayList<>();
 
     @Override

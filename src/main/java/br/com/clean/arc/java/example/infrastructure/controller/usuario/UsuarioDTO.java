@@ -1,8 +1,8 @@
-package br.com.clean.arc.java.example.infra.controller.usuario;
+package br.com.clean.arc.java.example.infrastructure.controller.usuario;
 
 import java.time.LocalDate;
 
-public record UsuarioDto(
+public record UsuarioDTO(
         String cpf,
         String nome,
         LocalDate nascimento,

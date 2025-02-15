@@ -1,13 +1,13 @@
 package br.com.clean.arc.java.example;
 
 import br.com.clean.arc.java.example.domain.entities.usuario.Usuario;
-import br.com.clean.arc.java.example.infra.gateways.RepositorioDeUsuarioEmArquivo;
+import br.com.clean.arc.java.example.infrastructure.gateways.UsuarioRepositorioEmArquivo;
 
 import java.time.LocalDate;
 
 public class UtilizaUsuarioComArquivos {
     public static void main(String[] args) {
-        RepositorioDeUsuarioEmArquivo repositorioDeUsuarioEmArquivo = new RepositorioDeUsuarioEmArquivo();
+        UsuarioRepositorioEmArquivo repositorioDeUsuarioEmArquivo = new UsuarioRepositorioEmArquivo();
 
         repositorioDeUsuarioEmArquivo.cadastrarUsuario(new Usuario("456.789.888-88", "João",
                 LocalDate.parse("2000-10-15"), "joao@email.com"));

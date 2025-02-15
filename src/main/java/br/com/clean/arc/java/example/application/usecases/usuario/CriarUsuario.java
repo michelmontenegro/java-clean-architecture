@@ -1,12 +1,13 @@
 package br.com.clean.arc.java.example.application.usecases.usuario;
 
-import br.com.clean.arc.java.example.application.gateways.RepositorioDeUsuario;
+import br.com.clean.arc.java.example.application.gateways.UsuarioRepositorio;
 import br.com.clean.arc.java.example.domain.entities.usuario.Usuario;
 
 public class CriarUsuario {
-    private final RepositorioDeUsuario repositorio;
 
-    public CriarUsuario(RepositorioDeUsuario repositorio) {
+    private final UsuarioRepositorio repositorio;
+
+    public CriarUsuario(UsuarioRepositorio repositorio) {
         this.repositorio = repositorio;
     }
 

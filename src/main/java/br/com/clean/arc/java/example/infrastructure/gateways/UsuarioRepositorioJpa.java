@@ -1,18 +1,18 @@
-package br.com.clean.arc.java.example.infra.gateways;
+package br.com.clean.arc.java.example.infrastructure.gateways;
 
-import br.com.clean.arc.java.example.application.gateways.RepositorioDeUsuario;
+import br.com.clean.arc.java.example.application.gateways.UsuarioRepositorio;
 import br.com.clean.arc.java.example.domain.entities.usuario.Usuario;
-import br.com.clean.arc.java.example.infra.persistence.UsuarioEntity;
-import br.com.clean.arc.java.example.infra.persistence.UsuarioRepository;
+import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioEntity;
+import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class RepositorioDeUsuarioJpa implements RepositorioDeUsuario {
+public class UsuarioRepositorioJpa implements UsuarioRepositorio {
     private final UsuarioRepository repositorio;
     private final UsuarioEntityMapper mapper;
 
-    public RepositorioDeUsuarioJpa(UsuarioRepository repositorio, UsuarioEntityMapper mapper) {
+    public UsuarioRepositorioJpa(UsuarioRepository repositorio, UsuarioEntityMapper mapper) {
         this.repositorio = repositorio;
         this.mapper = mapper;
     }
