@@ -1,7 +1,7 @@
-package br.com.clean.arc.java.example.application.usecases.usuario;
+package br.com.clean.arc.java.example.application.usecase.usuario;
 
-import br.com.clean.arc.java.example.application.gateways.UsuarioRepositorio;
-import br.com.clean.arc.java.example.domain.entities.usuario.Usuario;
+import br.com.clean.arc.java.example.application.gateway.UsuarioRepositorio;
+import br.com.clean.arc.java.example.domain.entitie.usuario.Usuario;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package br.com.clean.arc.java.example.infrastructure.controller.usuario;
 
-import br.com.clean.arc.java.example.application.usecases.usuario.CriarUsuario;
-import br.com.clean.arc.java.example.application.usecases.usuario.ListarUsuario;
-import br.com.clean.arc.java.example.domain.entities.usuario.Usuario;
+import br.com.clean.arc.java.example.application.usecase.usuario.CriarUsuario;
+import br.com.clean.arc.java.example.application.usecase.usuario.ListarUsuario;
+import br.com.clean.arc.java.example.domain.entitie.usuario.Usuario;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,4 +1,4 @@
-package br.com.clean.arc.java.example.domain.entities.usuario;
+package br.com.clean.arc.java.example.domain.entitie.usuario;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

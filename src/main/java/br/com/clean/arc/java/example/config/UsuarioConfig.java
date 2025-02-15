@@ -1,10 +1,10 @@
 package br.com.clean.arc.java.example.config;
 
-import br.com.clean.arc.java.example.application.gateways.UsuarioRepositorio;
-import br.com.clean.arc.java.example.application.usecases.usuario.CriarUsuario;
-import br.com.clean.arc.java.example.application.usecases.usuario.ListarUsuario;
-import br.com.clean.arc.java.example.infrastructure.gateways.UsuarioRepositorioJpa;
-import br.com.clean.arc.java.example.infrastructure.gateways.UsuarioEntityMapper;
+import br.com.clean.arc.java.example.application.gateway.UsuarioRepositorio;
+import br.com.clean.arc.java.example.application.usecase.usuario.CriarUsuario;
+import br.com.clean.arc.java.example.application.usecase.usuario.ListarUsuario;
+import br.com.clean.arc.java.example.infrastructure.gateway.UsuarioRepositorioJpa;
+import br.com.clean.arc.java.example.infrastructure.gateway.UsuarioEntityMapper;
 import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

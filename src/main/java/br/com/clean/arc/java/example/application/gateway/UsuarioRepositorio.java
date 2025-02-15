@@ -1,6 +1,6 @@
-package br.com.clean.arc.java.example.application.gateways;
+package br.com.clean.arc.java.example.application.gateway;
 
-import br.com.clean.arc.java.example.domain.entities.usuario.Usuario;
+import br.com.clean.arc.java.example.domain.entitie.usuario.Usuario;
 
 import java.util.List;
 
