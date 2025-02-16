@@ -1,7 +1,5 @@
-package br.com.clean.arc.java.example.infrastructure.persistence;
+package br.com.clean.arc.java.example.infrastructure.persistence.usuario;
 
-import br.com.clean.arc.java.example.domain.entity.usuario.Usuario;
-import br.com.clean.arc.java.example.domain.vo.EnderecoVO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

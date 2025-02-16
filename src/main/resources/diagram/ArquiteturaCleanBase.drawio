@@ -45,13 +45,16 @@
           <mxGeometry x="10" y="75" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FbnemqtYrlEn5eFelwTh-2" value="persistence" style="swimlane;whiteSpace=wrap;html=1;" parent="FbnemqtYrlEn5eFelwTh-1" vertex="1">
-          <mxGeometry x="20" y="530" width="183.5" height="120" as="geometry" />
+          <mxGeometry x="17" y="513" width="210" height="149" as="geometry" />
         </mxCell>
-        <mxCell id="FbnemqtYrlEn5eFelwTh-3" value="&lt;b&gt;Usuario&lt;/b&gt;JPA.java" style="rounded=0;whiteSpace=wrap;html=1;" parent="FbnemqtYrlEn5eFelwTh-2" vertex="1">
-          <mxGeometry x="14" y="40" width="150" height="30" as="geometry" />
+        <mxCell id="m4TfsHqXSTyR2v79M_cV-6" value="usuario" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="FbnemqtYrlEn5eFelwTh-2">
+          <mxGeometry x="17.5" y="27" width="175" height="103" as="geometry" />
         </mxCell>
-        <mxCell id="XDVRtDEUCSswxIUrD-3b-5" value="&lt;b&gt;Usuario&lt;/b&gt;Repositorio.java" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="FbnemqtYrlEn5eFelwTh-2" vertex="1">
-          <mxGeometry x="15" y="80" width="145" height="30" as="geometry" />
+        <mxCell id="FbnemqtYrlEn5eFelwTh-3" value="&lt;b&gt;Usuario&lt;/b&gt;JPA.java" style="rounded=0;whiteSpace=wrap;html=1;" parent="m4TfsHqXSTyR2v79M_cV-6" vertex="1">
+          <mxGeometry x="14.5" y="30" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XDVRtDEUCSswxIUrD-3b-5" value="&lt;b&gt;Usuario&lt;/b&gt;Repositorio.java" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="m4TfsHqXSTyR2v79M_cV-6" vertex="1">
+          <mxGeometry x="17" y="68" width="145" height="30" as="geometry" />
         </mxCell>
         <mxCell id="XDVRtDEUCSswxIUrD-3b-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="FbnemqtYrlEn5eFelwTh-1" source="FbnemqtYrlEn5eFelwTh-11" target="FbnemqtYrlEn5eFelwTh-3" edge="1">
           <mxGeometry relative="1" as="geometry" />

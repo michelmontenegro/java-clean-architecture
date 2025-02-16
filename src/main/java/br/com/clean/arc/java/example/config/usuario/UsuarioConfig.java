@@ -5,7 +5,7 @@ import br.com.clean.arc.java.example.application.usecase.usuario.CriarUsuario;
 import br.com.clean.arc.java.example.application.usecase.usuario.ListarUsuario;
 import br.com.clean.arc.java.example.infrastructure.gateway.usuario.UsuarioRepositorioJpa;
 import br.com.clean.arc.java.example.infrastructure.gateway.usuario.UsuarioEntityMapper;
-import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioRepository;
+import br.com.clean.arc.java.example.infrastructure.persistence.usuario.UsuarioRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

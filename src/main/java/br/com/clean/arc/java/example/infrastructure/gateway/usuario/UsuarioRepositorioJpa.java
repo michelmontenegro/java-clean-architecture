@@ -2,8 +2,8 @@ package br.com.clean.arc.java.example.infrastructure.gateway.usuario;
 
 import br.com.clean.arc.java.example.application.gateway.UsuarioRepositorio;
 import br.com.clean.arc.java.example.domain.entity.usuario.Usuario;
-import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioJPA;
-import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioRepository;
+import br.com.clean.arc.java.example.infrastructure.persistence.usuario.UsuarioJPA;
+import br.com.clean.arc.java.example.infrastructure.persistence.usuario.UsuarioRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -2,7 +2,7 @@ package br.com.clean.arc.java.example.infrastructure.gateway.usuario;
 
 import br.com.clean.arc.java.example.domain.entity.usuario.Usuario;
 import br.com.clean.arc.java.example.infrastructure.controller.usuario.UsuarioDTO;
-import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioJPA;
+import br.com.clean.arc.java.example.infrastructure.persistence.usuario.UsuarioJPA;
 
 public class UsuarioEntityMapper {
 

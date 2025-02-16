@@ -1,4 +1,4 @@
-package br.com.clean.arc.java.example.infrastructure.persistence;
+package br.com.clean.arc.java.example.infrastructure.persistence.usuario;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
