@@ -1,4 +1,4 @@
-package br.com.clean.arc.java.example.domain.entitie.usuario;
+package br.com.clean.arc.java.example.domain.entity.usuario;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -22,15 +22,25 @@ public class UsuarioTest {
 
     @Test
     public void deveCriarUsuarioUsandoFabricaDeUsuario(){
-        UsuarioBuilder fabrica = new UsuarioBuilder();
-        Usuario usuario = fabrica.comNomeCpfNascimento("Emily", "654.123.897-88",
-                LocalDate.parse("2000-10-01"));
+
+        Usuario usuario = new Usuario.Builder("654.123.897-88")
+                .nome("Emily")
+                .nascimento(LocalDate.parse("2000-10-01"))
+                .email("email@email.com")
+                .cep("email@email.com")
+                .numero(40)
+                .complemento("apto 201")
+                .build();
 
         Assertions.assertEquals("Emily", usuario.getNome());
-
-        usuario = fabrica.incluiEndereco("12345-999", 40, "apto 201");
-
         Assertions.assertEquals("apto 201", usuario.getEndereco().getComplemento());
+
+//        UsuarioBuilder fabrica = new UsuarioBuilder();
+//        Usuario usuario = fabrica.comNomeCpfNascimento("Emily", "654.123.897-88",
+//                LocalDate.parse("2000-10-01"));
+//        Assertions.assertEquals("Emily", usuario.getNome());
+//        usuario = fabrica.incluiEndereco("12345-999", 40, "apto 201");
+//        Assertions.assertEquals("apto 201", usuario.getEndereco().getComplemento());
 
     }
 }

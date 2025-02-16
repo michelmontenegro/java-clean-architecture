@@ -10,7 +10,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "usuarios")
-public class UsuarioEntity {
+public class UsuarioJPA {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,8 +19,8 @@ public class UsuarioEntity {
     private LocalDate nascimento;
     private String email;
 
-    public UsuarioEntity() {}
-    public UsuarioEntity(String cpf, String nome, LocalDate nascimento, String email) {
+    public UsuarioJPA() {}
+    public UsuarioJPA(String cpf, String nome, LocalDate nascimento, String email) {
         this.cpf = cpf;
         this.nome = nome;
         this.nascimento = nascimento;

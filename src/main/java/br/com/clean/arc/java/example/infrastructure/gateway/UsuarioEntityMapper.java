@@ -1,16 +1,16 @@
 package br.com.clean.arc.java.example.infrastructure.gateway;
 
-import br.com.clean.arc.java.example.domain.entitie.usuario.Usuario;
-import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioEntity;
+import br.com.clean.arc.java.example.domain.entity.usuario.Usuario;
+import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioJPA;
 
 public class UsuarioEntityMapper {
 
-    public UsuarioEntity toEntity(Usuario usuario){
-        return new UsuarioEntity(usuario.getCpf(), usuario.getNome(),
+    public UsuarioJPA toEntity(Usuario usuario){
+        return new UsuarioJPA(usuario.getCpf(), usuario.getNome(),
                 usuario.getNascimento(), usuario.getEmail());
     }
 
-    public Usuario toDomain(UsuarioEntity entity){
+    public Usuario toDomain(UsuarioJPA entity){
         return new Usuario(entity.getCpf(), entity.getNome(), entity.getNascimento(),
                 entity.getEmail());
     }

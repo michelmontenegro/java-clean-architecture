@@ -1,8 +1,8 @@
 package br.com.clean.arc.java.example.infrastructure.gateway;
 
 import br.com.clean.arc.java.example.application.gateway.UsuarioRepositorio;
-import br.com.clean.arc.java.example.domain.entitie.usuario.Usuario;
-import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioEntity;
+import br.com.clean.arc.java.example.domain.entity.usuario.Usuario;
+import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioJPA;
 import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioRepository;
 
 import java.util.List;
@@ -19,7 +19,7 @@ public class UsuarioRepositorioJpa implements UsuarioRepositorio {
 
     @Override
     public Usuario cadastrarUsuario(Usuario usuario) {
-        UsuarioEntity entity = mapper.toEntity(usuario);
+        UsuarioJPA entity = mapper.toEntity(usuario);
         repositorio.save(entity);
         return mapper.toDomain(entity);
     }

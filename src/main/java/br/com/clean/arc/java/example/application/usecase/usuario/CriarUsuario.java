@@ -1,7 +1,7 @@
 package br.com.clean.arc.java.example.application.usecase.usuario;
 
 import br.com.clean.arc.java.example.application.gateway.UsuarioRepositorio;
-import br.com.clean.arc.java.example.domain.entitie.usuario.Usuario;
+import br.com.clean.arc.java.example.domain.entity.usuario.Usuario;
 
 public class CriarUsuario {
 

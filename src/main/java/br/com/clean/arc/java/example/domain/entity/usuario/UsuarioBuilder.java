@@ -1,4 +1,4 @@
-package br.com.clean.arc.java.example.domain.entitie.usuario;
+package br.com.clean.arc.java.example.domain.entity.usuario;
 
 import br.com.clean.arc.java.example.domain.vo.EnderecoVO;
 

@@ -1,7 +1,7 @@
 package br.com.clean.arc.java.example.infrastructure.gateway;
 
 import br.com.clean.arc.java.example.application.gateway.UsuarioRepositorio;
-import br.com.clean.arc.java.example.domain.entitie.usuario.Usuario;
+import br.com.clean.arc.java.example.domain.entity.usuario.Usuario;
 
 import java.io.FileWriter;
 import java.io.IOException;
