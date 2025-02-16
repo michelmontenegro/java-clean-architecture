@@ -31,17 +31,17 @@ public class UsuarioJPA {
     }
 
     public UsuarioJPA(Builder builder){
-        this.cpf = builder.cpf;
-        this.nome = builder.nome;
-        this.nascimento = builder.nascimento;
-        this.email = builder.email;
+        this.setCpf(builder.cpf);
+        this.setNome(builder.nome);
+        this.setNascimento(builder.nascimento);
+        this.setEmail(builder.email);
     }
 
     /**
      * Design Pattern Builder
      * Classe Builder (Estatica e Internar) para criar instâncias de Usuario.
      * Permite a construção passo a passo de objetos Usuario com atributos opcionais.
-     *
+     * --------------------------------------------------------------
      * Neste padrão os atributos da Classe Usuario deveriam ser FINAL, para a garantia de imutabilidade. Quando precisar
      */
     public static class Builder {

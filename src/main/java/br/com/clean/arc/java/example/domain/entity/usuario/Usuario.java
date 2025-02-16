@@ -14,11 +14,11 @@ public class Usuario {
     private EnderecoVO endereco;
 
     public Usuario(Builder builder){
-        this.cpf = builder.cpf;
-        this.nome = builder.nome;
-        this.nascimento = builder.nascimento;
-        this.email = builder.email;
-        this.endereco = new EnderecoVO(builder.cep, builder.numero, builder.complemento);
+        this.setCpf(builder.cpf);
+        this.setNome(builder.nome);
+        this.setNascimento(builder.nascimento);
+        this.setEmail(builder.email);
+        this.setEndereco(new EnderecoVO.Builder().cep(builder.cep).numero(builder.numero).complemento(builder.complemento).build());
     }
 
     /**

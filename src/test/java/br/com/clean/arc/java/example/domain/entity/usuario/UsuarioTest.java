@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 public class UsuarioTest {
     @Test
-    public void naoDeveCadastrarUsuarioComCpfNoFormatoInvalido(){
+    void naoDeveCadastrarUsuarioComCpfNoFormatoInvalido(){
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> new Usuario("123456.789-99", "Jacque", LocalDate.parse("1990-09-08"), "email@email.com"));
 
@@ -21,7 +21,7 @@ public class UsuarioTest {
     }
 
     @Test
-    public void deveCriarUsuarioUsandoFabricaDeUsuario(){
+    void deveCriarUsuarioUsandoFabricaDeUsuario(){
 
         Usuario usuario = new Usuario.Builder("654.123.897-88")
                 .nome("Emily")

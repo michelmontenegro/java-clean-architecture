@@ -16,9 +16,9 @@ public class EnderecoVO {
     }
 
     public EnderecoVO(Builder builder){
-        this.cep = builder.cep;
-        this.numero = builder.numero;
-        this.complemento = builder.complemento;
+        this.setCep(builder.cep);
+        this.setNumero(builder.numero);
+        this.setComplemento(builder.complemento);
     }
 
     /**
@@ -32,9 +32,6 @@ public class EnderecoVO {
         private String cep;
         private Integer numero;
         private String complemento;
-
-        public Builder() {
-        }
 
         public Builder cep(String cep) {
             this.cep = cep;

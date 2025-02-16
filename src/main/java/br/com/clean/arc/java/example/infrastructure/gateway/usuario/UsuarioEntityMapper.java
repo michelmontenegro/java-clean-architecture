@@ -1,6 +1,7 @@
 package br.com.clean.arc.java.example.infrastructure.gateway.usuario;
 
 import br.com.clean.arc.java.example.domain.entity.usuario.Usuario;
+import br.com.clean.arc.java.example.infrastructure.controller.usuario.UsuarioDTO;
 import br.com.clean.arc.java.example.infrastructure.persistence.UsuarioJPA;
 
 public class UsuarioEntityMapper {
@@ -19,5 +20,13 @@ public class UsuarioEntityMapper {
                 .nascimento(entity.getNascimento())
                 .email(entity.getEmail())
                 .build();
+    }
+
+    public UsuarioDTO toDTO(Usuario usuario){
+        return new UsuarioDTO(
+                usuario.getCpf(),
+                usuario.getNome(),
+                usuario.getNascimento(),
+                usuario.getEmail());
     }
 }
