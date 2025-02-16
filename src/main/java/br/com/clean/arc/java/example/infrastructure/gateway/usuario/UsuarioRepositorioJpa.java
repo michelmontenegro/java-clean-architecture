@@ -1,4 +1,4 @@
-package br.com.clean.arc.java.example.infrastructure.gateway;
+package br.com.clean.arc.java.example.infrastructure.gateway.usuario;
 
 import br.com.clean.arc.java.example.application.gateway.UsuarioRepositorio;
 import br.com.clean.arc.java.example.domain.entity.usuario.Usuario;

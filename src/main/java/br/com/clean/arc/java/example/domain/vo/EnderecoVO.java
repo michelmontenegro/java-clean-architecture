@@ -1,5 +1,9 @@
 package br.com.clean.arc.java.example.domain.vo;
 
+import br.com.clean.arc.java.example.domain.entity.usuario.Usuario;
+
+import java.time.LocalDate;
+
 public class EnderecoVO {
     private String cep;
     private Integer numero;
@@ -9,6 +13,47 @@ public class EnderecoVO {
         this.cep = cep;
         this.numero = numero;
         this.complemento = complemento;
+    }
+
+    public EnderecoVO(Builder builder){
+        this.cep = builder.cep;
+        this.numero = builder.numero;
+        this.complemento = builder.complemento;
+    }
+
+    /**
+     * Design Pattern Builder
+     * Classe Builder (Estatica e Internar) para criar instâncias de Usuario.
+     * Permite a construção passo a passo de objetos Usuario com atributos opcionais.
+     *
+     * Neste padrão os atributos da Classe Usuario deveriam ser FINAL, para a garantia de imutabilidade. Quando precisar
+     */
+    public static class Builder {
+        private String cep;
+        private Integer numero;
+        private String complemento;
+
+        public Builder() {
+        }
+
+        public Builder cep(String cep) {
+            this.cep = cep;
+            return this;
+        }
+
+        public Builder numero(Integer numero) {
+            this.numero = numero;
+            return this;
+        }
+
+        public Builder complemento(String complemento) {
+            this.complemento = complemento;
+            return this;
+        }
+
+        public EnderecoVO build() {
+            return new EnderecoVO(this);
+        }
     }
 
     public String getCep() {

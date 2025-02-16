@@ -1,5 +1,7 @@
 package br.com.clean.arc.java.example.infrastructure.persistence;
 
+import br.com.clean.arc.java.example.domain.entity.usuario.Usuario;
+import br.com.clean.arc.java.example.domain.vo.EnderecoVO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,11 +22,62 @@ public class UsuarioJPA {
     private String email;
 
     public UsuarioJPA() {}
+
     public UsuarioJPA(String cpf, String nome, LocalDate nascimento, String email) {
         this.cpf = cpf;
         this.nome = nome;
         this.nascimento = nascimento;
         this.email = email;
+    }
+
+    public UsuarioJPA(Builder builder){
+        this.cpf = builder.cpf;
+        this.nome = builder.nome;
+        this.nascimento = builder.nascimento;
+        this.email = builder.email;
+    }
+
+    /**
+     * Design Pattern Builder
+     * Classe Builder (Estatica e Internar) para criar instâncias de Usuario.
+     * Permite a construção passo a passo de objetos Usuario com atributos opcionais.
+     *
+     * Neste padrão os atributos da Classe Usuario deveriam ser FINAL, para a garantia de imutabilidade. Quando precisar
+     */
+    public static class Builder {
+        private String cpf;
+        private String nome;
+        private LocalDate nascimento;
+        private String email;
+
+        public Builder(String cpf) {
+            this.cpf = cpf;
+        }
+
+        public Builder cpf(String cpf) {
+            this.cpf = cpf;
+            return this;
+        }
+
+        public Builder nome(String nome) {
+            this.nome = nome;
+            return this;
+        }
+
+        public Builder nascimento(LocalDate nascimento) {
+            this.nascimento = nascimento;
+            return this;
+        }
+
+        public Builder email(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public UsuarioJPA build() {
+            return new UsuarioJPA(this);
+        }
+
     }
 
     public Long getId() {

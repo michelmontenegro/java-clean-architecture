@@ -4,6 +4,9 @@ import br.com.clean.arc.java.example.domain.vo.EnderecoVO;
 
 import java.time.LocalDate;
 
+/**
+ * Classe "Sem uso", mudei para o padrão de projeto Builder na Entidade de Dominio Usuario
+ */
 public class UsuarioBuilder {
     private Usuario usuario;
 

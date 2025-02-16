@@ -5,6 +5,7 @@ import br.com.clean.arc.java.example.domain.vo.EnderecoVO;
 import java.time.LocalDate;
 
 public class Usuario {
+
     private String cpf;
     private String nome;
     private LocalDate nascimento;
@@ -20,12 +21,12 @@ public class Usuario {
         this.endereco = new EnderecoVO(builder.cep, builder.numero, builder.complemento);
     }
 
-    //Design Pattern Builder
-
     /**
      * Design Pattern Builder
      * Classe Builder (Estatica e Internar) para criar instâncias de Usuario.
      * Permite a construção passo a passo de objetos Usuario com atributos opcionais.
+     *
+     * Neste padrão os atributos da Classe Usuario deveriam ser FINAL, para a garantia de imutabilidade. Quando precisar
      */
     public static class Builder {
         private String cpf;

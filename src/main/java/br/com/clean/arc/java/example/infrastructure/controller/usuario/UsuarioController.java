@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,8 +27,13 @@ public class UsuarioController {
 
     @PostMapping
     public UsuarioDTO cadastrarUsuario(@RequestBody UsuarioDTO dto) {
-        Usuario salvo = criarUsuario.cadastrarUsuario(new Usuario(dto.cpf(), dto.nome(), dto.nascimento(),
-                dto.email()));
+        Usuario usrDomain = new Usuario.Builder(dto.cpf())
+                .nome(dto.nome())
+                .nascimento(dto.nascimento())
+                .email(dto.email())
+                .build();
+
+        Usuario salvo = criarUsuario.cadastrarUsuario(usrDomain);
 
         return new UsuarioDTO(salvo.getCpf(), salvo.getNome(), salvo.getNascimento(), salvo.getEmail());
 

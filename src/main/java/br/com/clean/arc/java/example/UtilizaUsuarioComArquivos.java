@@ -1,7 +1,7 @@
 package br.com.clean.arc.java.example;
 
 import br.com.clean.arc.java.example.domain.entity.usuario.Usuario;
-import br.com.clean.arc.java.example.infrastructure.gateway.UsuarioRepositorioEmArquivo;
+import br.com.clean.arc.java.example.infrastructure.gateway.usuario.UsuarioRepositorioEmArquivo;
 
 import java.time.LocalDate;
 
